@@ -5,3 +5,14 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# 为每个页面添加具体路由
+[[redirects]]
+  from = "/books"
+  to = "/books.html"
+  status = 200
+
+[[redirects]]
+  from = "/profile"
+  to = "/profile.html"
+  status = 200
