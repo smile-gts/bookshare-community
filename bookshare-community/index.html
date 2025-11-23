@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShare Community - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">BookShare</h1>
+            <div class="nav-links">
+                <a href="index.html" class="active">首页</a>
+                <a href="books.html">图书库</a>
+                <a href="profile.html">我的空间</a>
+                <button id="authButton" class="btn-auth">登录</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>分享阅读的快乐</h2>
+            <p>发现好书，分享知识，连接爱书之人</p>
+            <button id="getStarted" class="btn-primary">开始探索</button>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>📚 海量图书</h3>
+                <p>浏览社区用户分享的各类图书资源</p>
+            </div>
+            <div class="feature-card">
+                <h3>❤️ 收藏喜欢</h3>
+                <p>收藏您感兴趣的图书，随时查看</p>
+            </div>
+            <div class="feature-card">
+                <h3>👥 社区互动</h3>
+                <p>与志同道合的书友交流分享</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>登录/注册</h3>
+            <form id="authForm">
+                <input type="email" id="email" placeholder="邮箱" required>
+                <input type="password" id="password" placeholder="密码" required>
+                <button type="submit" class="btn-primary">登录</button>
+            </form>
+            <p>还没有账号？<a href="#" id="switchToSignup">立即注册</a></p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

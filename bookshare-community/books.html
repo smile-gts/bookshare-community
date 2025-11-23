@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书库 - BookShare Community</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">BookShare</h1>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="books.html" class="active">图书库</a>
+                <a href="profile.html">我的空间</a>
+                <button id="authButton" class="btn-auth">登录</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>图书库</h2>
+            <button id="addBookBtn" class="btn-primary" style="display:none;">添加图书</button>
+        </div>
+
+        <div id="bookForm" class="form-container" style="display:none;">
+            <h3>添加新图书</h3>
+            <form id="newBookForm">
+                <input type="text" id="bookTitle" placeholder="书名" required>
+                <input type="text" id="bookAuthor" placeholder="作者" required>
+                <textarea id="bookDescription" placeholder="图书描述"></textarea>
+                <input type="url" id="bookCover" placeholder="封面图片URL">
+                <button type="submit" class="btn-primary">发布图书</button>
+            </form>
+        </div>
+
+        <div class="books-grid" id="booksContainer">
+            <!-- 图书卡片将通过JavaScript动态生成 -->
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/books.js"></script>
+</body>
+</html>
