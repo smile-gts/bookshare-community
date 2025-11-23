@@ -1,12 +1,13 @@
 [build]
   publish = "."
 
+# SPA 路由支持 - 处理前端路由
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404
 
-# 为每个页面添加具体路由
+# 为特定页面提供正确路由
 [[redirects]]
   from = "/books"
   to = "/books.html"
